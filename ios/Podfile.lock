@@ -1,0 +1,57 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_archive (0.0.1):
+    - Flutter
+    - ZIPFoundation (= 0.9.11)
+  - ObjectBox (1.6.0)
+  - objectbox_flutter_libs (0.0.1):
+    - Flutter
+    - ObjectBox (= 1.6.0)
+  - path_provider (0.0.1):
+    - Flutter
+  - share_plus (0.0.1):
+    - Flutter
+  - url_launcher (0.0.1):
+    - Flutter
+  - ZIPFoundation (0.9.11)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_archive (from `.symlinks/plugins/flutter_archive/ios`)
+  - objectbox_flutter_libs (from `.symlinks/plugins/objectbox_flutter_libs/ios`)
+  - path_provider (from `.symlinks/plugins/path_provider/ios`)
+  - share_plus (from `.symlinks/plugins/share_plus/ios`)
+  - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
+
+SPEC REPOS:
+  trunk:
+    - ObjectBox
+    - ZIPFoundation
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_archive:
+    :path: ".symlinks/plugins/flutter_archive/ios"
+  objectbox_flutter_libs:
+    :path: ".symlinks/plugins/objectbox_flutter_libs/ios"
+  path_provider:
+    :path: ".symlinks/plugins/path_provider/ios"
+  share_plus:
+    :path: ".symlinks/plugins/share_plus/ios"
+  url_launcher:
+    :path: ".symlinks/plugins/url_launcher/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  flutter_archive: e7010a2779b4ff1483b00386bfb4e847f5836182
+  ObjectBox: a181cc5fb47e0a6ec60754d34dc49f40dc17829e
+  objectbox_flutter_libs: 511c59b863bc45abc7f6f338499e4a50e9aa5f1d
+  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
+  share_plus: 056a1e8ac890df3e33cb503afffaf1e9b4fbae68
+  url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
+  ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.10.1
