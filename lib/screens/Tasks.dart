@@ -4,11 +4,13 @@ import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_archive/flutter_archive.dart';
 import 'package:objectbox_backup_restore/entity.dart';
+import 'package:objectbox_backup_restore/screens/ListFiles.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../objectbox.g.dart';
+import 'Restore.dart';
 
 class Tasks extends StatefulWidget {
   const Tasks({Key? key}) : super(key: key);
@@ -22,8 +24,6 @@ class _TasksState extends State<Tasks> {
 
   late Store _store;
   late Stream<List<Task>> _stream;
-  List files = [];
-
   bool hasBeenInitialized = false;
 
   @override
@@ -81,7 +81,23 @@ class _TasksState extends State<Tasks> {
                                 onPressed: () => _zipFiles(),
                                 child: Text("Backup")),
                             ElevatedButton(
-                                onPressed: () => null, child: Text("Restore"))
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Restore()),
+                                  );
+                                },
+                                child: Text("Restore")),
+                            ElevatedButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ListFiles()),
+                                  );
+                                },
+                                child: Text("List Files"))
                           ],
                         ),
                         Expanded(
@@ -113,14 +129,6 @@ class _TasksState extends State<Tasks> {
       ),
     );
   }
-
-  // void _listofFiles() async {
-  //   String directory = (await getApplicationDocumentsDirectory()).path;
-  //   setState(() {
-  //     files = Directory("$directory")
-  //         .listSync(); //use your folder name insted of resume.
-  //   });
-  // }
 
   void _zipFiles() async {
     String directory = (await getApplicationDocumentsDirectory()).path;
